@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<style>
+    form {
+        margin: auto;
+        width: 50%;
+    }
+
+    .result {
+        margin: auto;
+        width: 35%;
+        border: 1px solid #ccc;
+    }
+</style>
+
+<head>
+    <title>Соотношение матрица-наполнитель</title>
+</head>
+
+<form action="{{url_for('main')}}" method = 'POST'>
+    <fieldset>
+        <legend>Введите параметры</legend>
+        Введите Плотность, кг/м3
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+    
+        Введите Модуль упругости, ГПа
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        Введите Количество отвердителя, м.%
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        Введите Содержание эпоксидных групп,%_2 
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        Введите Температура вспышки, С_2 
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        Введите Поверхностная плотность, г/м2
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        Введите Модуль упругости при растяжении, ГПа
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        Введите Прочность при растяжении, МПа
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        Введите Потребление смолы, г/м2
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        Введите Угол нашивки, град
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        Введите Шаг нашивки
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        Введите Плотность нашивки
+        <input name = "experience" type ="number"
+        required>
+        <br>
+        <br>
+
+        <input type = "submit">
+    </fieldset>
+</form>
+
+<div class ="result" align="center">
+    {% if result %}
+          <br>
+          <p style ="font-size:50px">
+            Соотношение
+          </p> 
+          <p style ="font-size:50px"> {{result}} </p>
+    {% endif %}  
+</div>
